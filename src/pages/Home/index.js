@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
 
-import api from "../service/api";
+import api from "../../service/api";
 import { styles } from "./styles";
 
 import { AntDesign } from "@expo/vector-icons";
