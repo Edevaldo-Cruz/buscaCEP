@@ -5,15 +5,12 @@ import {
   TextInput,
   TouchableOpacity,
   FlatList,
-  ScrollView,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { AntDesign } from "@expo/vector-icons";
 
 import { styles } from "./styles";
 import api from "../../service/api";
-
-import Select from "../../component/Select";
 
 export default function Search() {
   const [estadoSelecionado, setEstadoSelecionado] = useState([]);
