@@ -6,9 +6,18 @@ export const styles = StyleSheet.create({
     backgroundColor: "#FFF",
   },
   content: {
-    flex: 1,
     marginVertical: 80,
     marginHorizontal: 30,
+  },
+  containerPicker: {
+    justifyContent: "center",
+    borderWidth: 5,
+    borderRadius: 15,
+    width: 350,
+    height: 50,
+    borderColor: "#F0E9D2",
+    backgroundColor: "#F0E9D2",
+    paddingLeft: 16,
   },
   title: {
     fontWeight: "bold",
@@ -65,6 +74,8 @@ export const styles = StyleSheet.create({
     borderColor: "#F0E9D2",
     borderRadius: 15,
     padding: 30,
+    marginTop: 15,
+    marginBottom: 15,
   },
   textResult: {
     fontSize: 16,

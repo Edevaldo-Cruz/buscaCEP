@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginVertical: 80,
+    marginTop: 80,
     marginHorizontal: 30,
   },
   title: {
@@ -33,7 +33,6 @@ export const styles = StyleSheet.create({
   },
   search: {
     width: 60,
-
     backgroundColor: "#678983",
     borderRadius: 10,
     justifyContent: "center",
@@ -57,5 +56,26 @@ export const styles = StyleSheet.create({
   containerRowResult: {
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  containerBtnNav: {
+    alignItems: "flex-end",
+    marginTop: 15,
+  },
+  nav: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: 200,
+    height: 50,
+    backgroundColor: "#678983",
+    borderRadius: 15,
+  },
+  navRow: {
+    flexDirection: "row",
+  },
+  textBtnNav: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#FFF",
+    paddingRight: 8,
   },
 });
