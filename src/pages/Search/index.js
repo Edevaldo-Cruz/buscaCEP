@@ -93,6 +93,7 @@ export default function Search() {
           </TouchableOpacity>
         </View>
         <FlatList
+          style={styles.flatlist}
           data={address}
           keyExtractor={(address) => address.cep}
           renderItem={({ item: address }) => (

@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFF",
+    marginBottom: 100,
   },
   content: {
     marginVertical: 80,
@@ -66,6 +67,9 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#FFF",
     paddingLeft: 8,
+  },
+  flatlist: {
+    marginBottom: 200,
   },
   result: {
     width: 350,
