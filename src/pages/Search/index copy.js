@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   FlatList,
   Keyboard,
-  ScrollView,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { AntDesign } from "@expo/vector-icons";
@@ -29,7 +28,7 @@ export default function Search() {
     setAddress(data);
   };
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Busca Avançada de Endereço</Text>
         <View style={styles.containerPicker}>
@@ -98,24 +97,30 @@ export default function Search() {
             </View>
           </TouchableOpacity>
         </View>
+        <FlatList
+          style={styles.flatlist}
+          data={address}
+          keyExtractor={(address) => address.cep}
+          renderItem={({ item: address }) => (
+            <View style={styles.result}>
+              <Text style={styles.textResult}>
+                Endereço: {address.logradouro}
+              </Text>
 
-        {address.map(({ logradouro, bairro, cep, uf, ddd, complemento }) => {
-          return (
-            <View style={styles.result} key={cep}>
-              <Text style={styles.textResult}>Endereço: {logradouro}</Text>
-
-              <Text style={styles.textResult}>Bairro: {bairro} </Text>
-              <Text style={styles.textResult}>CEP: {cep}</Text>
-              <Text style={styles.textResult}>Complemento: {complemento}</Text>
+              <Text style={styles.textResult}>Bairro: {address.bairro} </Text>
+              <Text style={styles.textResult}>CEP: {address.cep}</Text>
+              <Text style={styles.textResult}>
+                Complemento: {address.complemento}
+              </Text>
 
               <View style={styles.containerRowResult}>
-                <Text style={styles.textResult}>Estado: {uf} </Text>
-                <Text style={styles.textResult}>DDD: {ddd} </Text>
+                <Text style={styles.textResult}>Estado: {address.uf} </Text>
+                <Text style={styles.textResult}>DDD: {address.ddd} </Text>
               </View>
             </View>
-          );
-        })}
+          )}
+        />
       </View>
-    </ScrollView>
+    </View>
   );
 }
